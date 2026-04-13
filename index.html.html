@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Faro - Inicio</title>
+    <style>
+        body {font-family: Arial, sans-serif; line-height: 1.6; color: #333;}
+        #reloj {font-size: 1.2em; font-weight: bold; color: #d63384; margin: 10px 0;}
+        .contador-container {background: #333; color: white; padding: 10px; margin: 10px 0; font-weight: bold;}
+        .formulario-estilo {background: #ffe8f8; padding: 30px; margin: 20px auto; text-align: left; max-width: 600px; border-radius: 8px;}
+        .input-text {width: 100%; padding: 10px; margin: 8px 0; border-radius: 4px; box-sizing: border-box;}
+        button {background-color: #d63384; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; 
+        button:hover {background-color: #b02a6a;}
+        table {margin-bottom: 20px;}
+        td {padding: 15px; vertical-align: top;}
+        .badge-seccion {background-color: #fce4ec; color: #d81b60; padding: 5px 10px; border-radius: 15px; font-size: 0.9em; display: inline-block; margin-bottom: 10px;}
+    </style>
+</head>
+<body>
+
+    <header id="inicio" style="text-align: center;">
+        <img src="logo.jpg" alt="Logo de El Faro" width="300">
+        <h1>El Faro Noticias</h1>
+      <div id="reloj">Cargando fecha y hora...</div> 
+    </header>
+    <hr>
+    <nav style="text-align: center;">
+        <a href="#inicio">Inicio</a> | 
+        <a href="#deporte">Deporte</a> | 
+        <a href="#negocios">Negocios</a> |
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <hr>
+    <div style="text-align: center;" class="contador-container">
+        Cantidad total de artículos en el sitio: <span id="total-articulos">9</span>
+    </div>
+
+    <div class="formulario-estilo" style="text-align: center;">
+        <h3>Redactar Nuevo Artículo</h3>
+        <label>Título:</label>
+        <input type="text" id="titulo-art" class="input-text" placeholder="Escriba el título aquí..."> <br>
+        <label>Contenido:</label>
+        <textarea id="desc-art" class="input-text" rows="3" placeholder="Describa el artículo..."></textarea> <br>
+        <button onclick="agregarNoticia()">Publicar Artículo</button> 
+    </div>
+
+    <section id="noticias-generales" style="text-align: center;">
+        <h2>Noticias Generales</h2>
+        <div class="badge-seccion">Artículos en esta sección: <span id="count-gen">3</span></div>
+        
+        <table border="1" width="100%" id="tabla-generales">
+            <tr id="fila-noticias">
+                <td>
+                    <h3 style="color: black;">Hombre murió baleado tras discusión en plena vía pública</h3>
+                    <h4 style="color: pink;">Categoría: Ciudad</h4>
+                    <p style="color: black;">Un hombre murió la noche del sábado en la comuna de Conchalí...</p>
+                </td>
+                <td>
+                    <h3 style="color: black;">Avanza el plan maestro del agua...</h3>
+                    <h4 style="color: pink;">Categoría: Medio Ambiente</h4>
+                    <p style="color: black;">El Parque Metropolitano Cerros de Renca tendrá un riego permanente...</p>
+                </td>
+                <td>
+                    <h3 style="color: black;">Ladrones escapan con $90 millones...</h3>
+                    <h4 style="color: pink;">Categoría: Seguridad</h4>
+                    <p style="color: black;">Un furgón de Chile Tabacos sufrió un asalto...</p>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <h3>Video Destacado</h3>
+        <video src="Video.mp4" width="400" controls></video>
+        <br><br>
+        <h3>Canción más escuchada Diciembre 2025</h3>
+        <img src="sabrina.jpg" alt="Portada Sabrina" width="100">
+        <br>
+        <audio src="sabrina.mp3.mp3" controls></audio>
+    </section>
+
+    <hr>
+
+    <section id="deporte" style="text-align: left;">
+        <h2>Noticias de Deporte</h2>
+        <div class="badge-seccion">Artículos en esta sección: <span id="count-dep">3</span></div>
+        <table border="1" width="100%">
+            <tr>
+                <td>
+                    <h3 style="color: black;">República democ´ratica del congo vence a Jamaica</h3>
+                    <h4 style="color: pink;">Categoría: Fútbol</h4>
+                    <p style="color: black;">Se lleva el penúltimo boleto para el mundial 2026...</p>
+                </td>
+                <td>
+                    <h3 style="color: black;">Chile elimina a locales</h3>
+                    <h4 style="color: pink;">Categoría: fútbol</h4>
+                    <p style="color: black;">Chile logra mantenerse en la zona I americana de la Billie Jean King Cup...</p>
+                </td>
+                <td>
+                    <h3 style="color: black;">Tragedia en Ghana</h3>
+                    <h4 style="color: pink;">Categoría: Fútbol</h4>
+                    <p style="color: black;"> Futbolista de primera división muere en asalto al bus en el que se trasladaba...</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="negocios" style="text-align: left;">
+        <h2>Noticias de Negocios y Emprendimientos</h2>
+        <div class="badge-seccion">Artículos en esta sección: <span id="count-neg">3</span></div>
+        <table border="1" width="100%">
+            <tr>
+                <td>
+                    <h3 style="color: black;">Joven crea exitosa app de noticias</h3>
+                    <h4 style="color: pink;">Categoría: Emprendimiento</h4>
+                    <p style="color: black;">Un estudiante universitario desarrolló una aplicación de noticias actuales...</p>
+                </td>
+                <td>
+                    <h3 style="color: black;">Nuevo negocio de Nicolás Massu</h3>
+                    <h4 style="color: pink;">Categoría: Economía</h4>
+                    <p style="color: black;">Fue fácil y fluido poder llegar a un acuerdo...</p>
+                </td>
+                <td>
+                    <h3 style="color: black;">Cierre tienda de calzado</h3>
+                    <h4 style="color: pink;">Categoría: Negocio</h4>
+                    <p style="color: black;">Tienda de calzado cierra sus puerts en pleno centro de Santiago...</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="contacto" style="text-align: center;">
+        <h2>Formulario de Contacto</h2>
+        <div class="formulario-estilo">
+            <label> Ingrese su Nombre Completo:</label><br> 
+            <input type="text" id="nom-contacto" class="input-text" placeholder="Ej: Josefa Becerra"> 
+            <br>
+            <label>Mensaje:</label><br> 
+            <textarea id="msj-contacto" class="input-text" rows="4" placeholder="Escriba su consulta, reclamo o sugerencia..."></textarea> 
+            <br>
+            <button type="button" onclick="enviarContacto()">Enviar Mensaje</button> 
+        </div>
+    </section>
+
+    <script>
+        function mostrarReloj() {
+            const ahora = new Date();
+            const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const fecha = ahora.toLocaleDateString('es-ES', opciones);
+            const hora = ahora.toLocaleTimeString('es-ES'); 
+            document.getElementById('reloj').innerText = fecha + " | " + hora;
+        }
+        setInterval(mostrarReloj, 1000); 
+        mostrarReloj();
+        let totalGlobal = 9; 
+        let totalGenerales = 3;
+
+        function agregarNoticia() {
+            const titulo = document.getElementById('titulo-art').value;
+            const desc = document.getElementById('desc-art').value;
+
+            if (titulo.trim() === "" || desc.trim() === "") {
+                alert("El título y la descripción no pueden estar vacíos.");
+                return;
+            }
+            const fila = document.getElementById('fila-noticias');
+            const nuevaCelda = fila.insertCell(-1); 
+            nuevaCelda.innerHTML = `
+                <h3 style="color: black;">${titulo}</h3>
+                <h4 style="color: pink;">Categoría: Dinámica</h4>
+                <p style="color: black;">${desc}</p>
+            `;
+
+            totalGlobal++;
+            totalGenerales++;
+
+            document.getElementById('total-articulos').innerText = totalGlobal;
+            document.getElementById('count-gen').innerText = totalGenerales;
+            document.getElementById('titulo-art').value = "";
+            document.getElementById('desc-art').value = "";
+            alert("¡ Su artículo ha sido publicado exitosamente!");
+        }
+
+        function enviarContacto() {
+            const nombre = document.getElementById('nom-contacto').value;
+            if(nombre.trim() !== "") {
+                alert("Gracias " + nombre + ", hemos recibido tu mensaje");
+                document.getElementById('nom-contacto').value = "";
+                document.getElementById('msj-contacto').value = "";
+            } else {
+                alert(" Debes rellenar los datos ");
+            }
+        }
+    </script>
+</body>
+</html>
